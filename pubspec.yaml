@@ -19,6 +19,7 @@ dependencies:
   flutter_feather_icons: ^2.0.0+1
   google_fonts: ^6.1.0
   gap: ^3.0.1
+  http: ^1.2.0
 
 dev_dependencies:
   flutter_test:

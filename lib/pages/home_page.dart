@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
+import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:my_ui9/core/constants/app_images.dart';
+import 'package:my_ui9/views/item_of_post.dart';
 import 'package:my_ui9/views/item_of_story.dart';
 
 class HomePage extends StatefulWidget {
@@ -86,72 +89,21 @@ class _HomePageState extends State<HomePage> {
                             // color: Colors.red,
                             child: ListView(
                               scrollDirection: Axis.horizontal,
-                              children: [
-                                const SizedBox(width: 15,),
-
-                                //Your story
-                                Column(
-                                  children: [
-                                    Stack(
-                                      children: [
-                                        Container(
-                                          decoration: BoxDecoration(
-                                            border: Border.all(color: Colors.grey.shade200),
-                                            shape: BoxShape.circle
-                                            // color: Colors.yellowAccent
-                                          ),
-                                          height: 80,
-                                          width: 80,
-                                          child: Container(
-                                            margin: const EdgeInsets.all(4),
-                                            clipBehavior: Clip.hardEdge,
-                                            decoration: const BoxDecoration(
-                                              shape: BoxShape.circle,
-                                              image: DecorationImage(
-                                                image: AssetImage('assets/images/ic_image1.jpg'),
-                                                fit: BoxFit.cover
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-
-                                        //Icon_Plus
-                                        Container(
-                                          alignment: Alignment.bottomRight,
-                                          width: 80,
-                                          height: 80,
-                                          child: Container(
-                                            padding: const EdgeInsets.all(1),
-                                            alignment: Alignment.center,
-                                            margin: const EdgeInsets.only(right: 8,bottom: 3),
-                                            height: 23,
-                                            width: 23,
-                                            decoration: BoxDecoration(
-                                              border: Border.all(color: Colors.white,width: 1.8),
-                                                shape: BoxShape.circle,
-                                                color:Colors.blue
-                                            ),
-                                            child: const Icon(CupertinoIcons.plus,color: Colors.white,size: 13,),
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                    const SizedBox(height: 12),
-                                    const Text('Your story',style: TextStyle(fontSize: 12, height: 1),)
-                                  ],
-                                ),
-                                const ItemOfStory(name: 'shahob_tursunov',image: 'assets/images/ic_image2.jpg',),
-                                const ItemOfStory(name: "asadbek_ro'ziyev",image: 'assets/images/ic_image3.jpeg',),
-                                const ItemOfStory(name: 'islom_rizayev',image: 'assets/images/ic_image4.jpg',),
-                                const ItemOfStory(name: 'aizibek_asadov',image: 'assets/images/ic_image2.jpg',),
-                                const ItemOfStory(name: 'muhriddi_nummatov',image: 'assets/images/ic_image3.jpeg',),
+                              children: const [
+                                Gap(15),
+                                MyStory(),
+                                ItemOfStory(name: 'shahob_tursunov',image: 'assets/images/ic_image2.jpg',),
+                                ItemOfStory(name: "asadbek_ro'ziyev",image: 'assets/images/ic_image3.jpeg',),
+                                ItemOfStory(name: 'islom_rizayev',image: 'assets/images/ic_image4.jpg',),
+                                ItemOfStory(name: 'aizibek_asadov',image: 'assets/images/ic_image2.jpg',),
+                                ItemOfStory(name: 'muhriddi_nummatov',image: 'assets/images/ic_image3.jpeg',),
                               ],
                             ),
                           ),
-                          Container(
-                            height: 700,
-                            color: Colors.orangeAccent,
-                          )
+                          const ItemOfPost(raqam: 5,image: AppImages.image1,),
+                          const ItemOfPost(raqam: 5,image: AppImages.image2,),
+                          const ItemOfPost(raqam: 5,image: AppImages.image3,),
+                          const ItemOfPost(raqam: 5,image: AppImages.image4,),
                         ],
                       );
                       },
