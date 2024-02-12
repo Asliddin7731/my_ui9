@@ -101,6 +101,7 @@ class MyStory extends StatelessWidget {
 
             //Icon_Plus
             Container(
+              margin: const EdgeInsets.only(right: 8,left: 12),
               alignment: Alignment.bottomRight,
               width: 80,
               height: 80,
