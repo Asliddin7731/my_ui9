@@ -1,12 +1,13 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class ItemOfPost extends StatelessWidget {
-  const ItemOfPost({super.key, required this.raqam, required this.image});
+  const ItemOfPost({super.key, required this.image, required this.name, required this.like});
 
-  final int raqam;
+  final int like;
   final String image;
+  final String name;
 
   @override
   Widget build(BuildContext context) {
@@ -53,10 +54,9 @@ class ItemOfPost extends StatelessWidget {
                   // Full name
                   SizedBox(
                     width: MediaQuery.sizeOf(context).width / 2,
-                    child: const Text(
-                      'Ummatov Asliddin Dasturchi',
+                    child: Text(name,
                       softWrap: false,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 17,
                         fontWeight: FontWeight.w500,
                         overflow: TextOverflow.fade
@@ -87,9 +87,13 @@ class ItemOfPost extends StatelessWidget {
                       icon: const Icon(FeatherIcons.heart),
                       onPressed: (){},
                     ),
-                    IconButton(
-                      icon: const Icon(FeatherIcons.messageCircle),
-                      onPressed: (){},
+                    SizedBox(
+                      height: 40,
+                      width: 40,
+                      child: IconButton(
+                        icon: SvgPicture.asset('assets/images/icon-comentaria.svg',),
+                        onPressed: (){},
+                      ),
                     ),
                     IconButton(
                       icon: const Icon(FeatherIcons.send),
@@ -106,7 +110,14 @@ class ItemOfPost extends StatelessWidget {
           ),
         ),
         
-        Text(raqam.toString()+' like',textAlign: TextAlign.start,)
+        Padding(
+          padding: const EdgeInsets.only(left:15,bottom: 10),
+          child: Text('$like likes',
+            style: const TextStyle(
+              fontWeight: FontWeight.w500
+            ),
+          ),
+        ),
       ],
     );
   }

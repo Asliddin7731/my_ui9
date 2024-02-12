@@ -13,16 +13,16 @@ class ItemOfStory extends StatelessWidget {
     return Column(
       children: [
         Expanded(
-          flex: 5,
+          flex: 9,
           child: Container(
-            margin: const EdgeInsets.symmetric(horizontal: 7),
+            margin: const EdgeInsets.symmetric(horizontal: 6),
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.bottomLeft,
                 colors: [
                   Colors.orangeAccent.withOpacity(0.9),
                   Colors.deepOrangeAccent.withOpacity(0.7),
-                  Colors.purpleAccent.withOpacity(0.6),
+                  Colors.red.withOpacity(0.9),
                   Colors.purple.withOpacity(0.8),
 
                 ]
@@ -30,7 +30,7 @@ class ItemOfStory extends StatelessWidget {
               shape: BoxShape.circle
             ),
             child: Container(
-              margin: const EdgeInsets.all(2.5),
+              margin: const EdgeInsets.all(3),
               decoration: BoxDecoration(
                 color: Colors.white,
                   border: Border.all(color: Colors.grey.shade200),
@@ -40,7 +40,7 @@ class ItemOfStory extends StatelessWidget {
               height: 80,
               width: 80,
               child: Container(
-                margin: const EdgeInsets.all(3),
+                margin: const EdgeInsets.all(2),
                 clipBehavior: Clip.hardEdge,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
@@ -53,11 +53,11 @@ class ItemOfStory extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 5),
         Expanded(
-          flex: 1,
+          flex: 2,
             child: SizedBox(
-              width: 80,
+              width: 90,
                 child: Text(name,style: const TextStyle(fontSize: 12, height: 1),
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -78,13 +78,14 @@ class MyStory extends StatelessWidget {
         Stack(
           children: [
             Container(
+              margin: const EdgeInsets.only(right: 8,left: 12),
               decoration: BoxDecoration(
-                  border: Border.all(color: Colors.grey.shade200),
+                  border: Border.all(color: Colors.white),
                   shape: BoxShape.circle
                 // color: Colors.yellowAccent
               ),
-              height: 80,
-              width: 80,
+              height: 82,
+              width: 82,
               child: Container(
                 margin: const EdgeInsets.all(4),
                 clipBehavior: Clip.hardEdge,
@@ -106,7 +107,7 @@ class MyStory extends StatelessWidget {
               child: Container(
                 padding: const EdgeInsets.all(1),
                 alignment: Alignment.center,
-                margin: const EdgeInsets.only(right: 8,bottom: 3),
+                margin: const EdgeInsets.only(right: 8,bottom: 3,),
                 height: 23,
                 width: 23,
                 decoration: BoxDecoration(
@@ -119,7 +120,7 @@ class MyStory extends StatelessWidget {
             )
           ],
         ),
-        const SizedBox(height: 12),
+        const SizedBox(height: 7),
         const Text('Your story',style: TextStyle(fontSize: 12, height: 1),)
       ],
     );

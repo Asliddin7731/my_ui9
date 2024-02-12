@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
-import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_ui9/core/constants/app_images.dart';
 import 'package:my_ui9/views/item_of_post.dart';
@@ -90,20 +89,20 @@ class _HomePageState extends State<HomePage> {
                             child: ListView(
                               scrollDirection: Axis.horizontal,
                               children: const [
-                                Gap(15),
                                 MyStory(),
                                 ItemOfStory(name: 'shahob_tursunov',image: 'assets/images/ic_image2.jpg',),
                                 ItemOfStory(name: "asadbek_ro'ziyev",image: 'assets/images/ic_image3.jpeg',),
-                                ItemOfStory(name: 'islom_rizayev',image: 'assets/images/ic_image4.jpg',),
+                                ItemOfStory(name: 'islom_rizayev',image: 'assets/images/ic_image5.webp',),
                                 ItemOfStory(name: 'aizibek_asadov',image: 'assets/images/ic_image2.jpg',),
                                 ItemOfStory(name: 'muhriddi_nummatov',image: 'assets/images/ic_image3.jpeg',),
                               ],
                             ),
                           ),
-                          const ItemOfPost(raqam: 5,image: AppImages.image1,),
-                          const ItemOfPost(raqam: 5,image: AppImages.image2,),
-                          const ItemOfPost(raqam: 5,image: AppImages.image3,),
-                          const ItemOfPost(raqam: 5,image: AppImages.image4,),
+                          const ItemOfPost(like: 1256,name: 'shahob_tursunov',image: AppImages.image2,),
+                          const ItemOfPost(like: 57,name: "asadbek_ro'ziyev",image: AppImages.image1,),
+                          const ItemOfPost(like: 8,name: 'islom_rizayev',image: AppImages.image4,),
+                          const ItemOfPost(like: 1898,name: 'aizibek_asadov',image: AppImages.image2,),
+                          const ItemOfPost(like: 674,name: 'muhriddin_ummatov',image: AppImages.image3,),
                         ],
                       );
                       },
